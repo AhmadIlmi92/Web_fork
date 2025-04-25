@@ -1,0 +1,140 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dengan Latar Bergerak */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #007BFF, #00C9A7, #FF5733);
+    background-size: 300% 300%;
+    animation: backgroundMove 10s infinite alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Animasi Latar Bergerak */
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Kotak CV (Card) */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Efek Hover: Membuat CV lebih dinamis */
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Efek Muncul (Fade In) */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Profile Styling */
+.profile {
+    margin: 20px 0;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile h2 {
+    font-size: 24px;
+    color: #007BFF;
+    margin-top: 10px;
+}
+
+.profile p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Biodata Styling */
+.bio {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.bio h3 {
+    font-size: 20px;
+    color: #333;
+    border-bottom: 3px solid #007BFF;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.bio ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.bio ul li {
+    font-size: 16px;
+    padding: 8px 0;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efek Hover pada Biodata */
+.bio ul li:hover {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Tombol Download CV */
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #007BFF;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Efek Hover pada Tombol */
+.download-btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
